@@ -19,3 +19,15 @@ get '/visit' do
   erb :visit
 end
 
+post '/visit' do
+
+  @username = params[:username]
+  @phone = params[:phone]
+  @datetime = params[:usertime]
+  @barber = params[:barber]
+  @color = params[:color]
+
+  erb "OK, username is #{@username}, ваш барбер #{@barber}, на #{@usertime}, 
+  вы выбрали цвет - #{@color}"
+
+end
